@@ -1,24 +1,55 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Pasos para ejecutar el proyecto
 
-Things you may want to cover:
+1 - Clonar el repositorio
 
-* Ruby version
+2 - Dentro de la carpeta del repositorio ejecutar el comando para crear la imagen 
+```bash
+docker compose build
+``` 
+3 - Ejecutar el siguiente comando para levantar el proyecto
+```bash
+docker compose up 
+``` 
+4 - Ejecutar el siguiente comando para obntener el id del contenedor y verificar q esten en UP los contenedores son 2 
+```bash
+docker ps -a
+``` 
+5 - Ejecutar el siguiente comando para ingresar al contenedor 
+```bash
+docker exec -it <container-id> sh
+``` 
+6 - Ejecutar el siguiente comando para crear la base de datos
+```bash
+rails db:create
+``` 
+7 - Ejecutar el siguiente comando para crear las migraciones
+```bash
+rails db:migrate
+``` 
+7 - Ejecutar el siguiente comando para correr el task
 
-* System dependencies
+**NOTA:** Esto puede tardar unos minutos. En la consola avisara cuando termine de persistir los datos en la BD
+```bash
+rake feature:get_data
+```  
 
-* Configuration
+8 - Una vez hechos todos los pasos ya el proyecto debe funcionar 
 
-* Database creation
+9 - Clonar el repositorio del front y ejecutar 
+```bash
+npm run dev
+```  
 
-* Database initialization
+## Requisitos
 
-* How to run the test suite
+- ruby >= versión 3.3.0
+- ruby on rails >= 7.1.3.2
 
-* Services (job queues, cache servers, search engines, etc.)
+## Autor
 
-* Deployment instructions
+- Este proyecto fue creado por **Oscar Diaz**.
 
-* ...
+## Contacto
+
+Para cualquier pregunta o comentario, no dudes en ponerte en contacto conmigo [github](https://github.com/oscarock)
