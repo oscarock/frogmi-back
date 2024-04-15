@@ -14,12 +14,13 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  password: root
+  host: mariadb
+  #socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: frogmi_back_development
+  database: frogmi_back
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

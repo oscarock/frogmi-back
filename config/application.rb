@@ -11,6 +11,14 @@ module FrogmiBack
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
+    # Configuración para permitir CORS
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'http://localhost:5173' # Reemplaza esto con el origen de tu aplicación Vue.js en desarrollo
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options]
+      end
+    end
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
