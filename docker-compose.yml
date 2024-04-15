@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=frogmi_back
+    ports:
+    - "3307:3306"
+    volumes:
+      - mydb-db:/var/lib/mysql
+
+volumes:
+  mydb-db:
