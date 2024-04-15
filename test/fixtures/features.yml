@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  properties_mag: 1.5
+  properties_place: MyString
+  properties_time: 2024-04-07 17:25:48
+  properties_url: MyString
+  properties_tsunami: false
+  properties_mag_type: MyString
+  properties_title: MyString
+  longitude: 1.5
+  latitude: 1.5
+
+two:
+  id: MyString
+  properties_mag: 1.5
+  properties_place: MyString
+  properties_time: 2024-04-07 17:25:48
+  properties_url: MyString
+  properties_tsunami: false
+  properties_mag_type: MyString
+  properties_title: MyString
+  longitude: 1.5
+  latitude: 1.5
